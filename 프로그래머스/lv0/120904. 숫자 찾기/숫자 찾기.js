@@ -6,4 +6,5 @@ function solution(num, k) {
     }
     let idx = arr.findIndex(el => k === el)
     return idx >= 0 ? idx+1 : -1
+
 }

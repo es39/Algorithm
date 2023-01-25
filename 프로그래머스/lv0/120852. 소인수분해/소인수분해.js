@@ -1,6 +1,6 @@
 function solution(n) {
     let prime = []
-    for(let i=2; i<=Math.sqrt(n); i++){
+    for(let i=2; i<=n; i++){
         while(n%i === 0){
             prime.push(i)
             n /= i;

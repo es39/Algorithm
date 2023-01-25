@@ -1,4 +1,5 @@
 function solution(n) {
+    // 결과 배열 선언
     let prime = []
     for(let i=2; i<=n; i++){
         while(n%i === 0){

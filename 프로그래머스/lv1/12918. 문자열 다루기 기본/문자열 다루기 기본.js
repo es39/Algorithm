@@ -12,6 +12,6 @@
 // }
 
 function solution(s){
-    var regex = /^\d{6}$|^\d{4}$/;
-    return regex.test(s);
+    let str = /^\d{4}$|^\d{6}$/
+    return str.test(s)
 }

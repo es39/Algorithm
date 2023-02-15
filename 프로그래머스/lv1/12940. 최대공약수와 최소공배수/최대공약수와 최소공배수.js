@@ -4,15 +4,25 @@ function solution(n, m) {
     return [gcd(max, min), lcm(max, min)]
 }
 
-function gcd(a, b){
-	while(b !== 0){
-		let r = a % b;
-		a = b;
-		b = r;
+function gcd(n, m){
+    // n = 24, m = 15
+	while(m !== 0){
+        // 24 % 15 = 1, 9 
+        // 15 % 9
+        // ... n % m = 0
+		let r = n % m;
+		n = m;
+		m = r;
+        
 	}
-	return a;
+	return n;
 }
 
-function lcm(a, b){
-	return a * (b / gcd(a, b));
+function lcm(n, m){
+	return n * (m / gcd(n, m)); // 3
 }
+
+// 24 15
+// 24 -> 1 2 3 4 6 8 12 24
+// 15 -> 1 5 15
+

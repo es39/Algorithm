@@ -5,8 +5,9 @@ function solution(s) {
     
     let result = []
     let arr = []
-    let sliced = s.slice(2, -2).split('},{').forEach(el => {
-        arr.push(el.split(',').map(el => Number(el)))
+    let sliced = s.slice(2, -2).split('},{').forEach(el => { 
+        // ["2", "2, 1"]
+        arr.push(el.split(',').map(el => Number(el))) 
     });
     arr.sort((a, b) => a.length-b.length)
     arr.map(el => {

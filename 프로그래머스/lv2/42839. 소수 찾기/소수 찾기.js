@@ -7,19 +7,19 @@ const isPrime = (n) => {
     }
     return true
 }
-
 function solution(numbers) {
     // 1. 숫자 -> 배열
-    // 2. 순열 
+    // 2. 순열
     // 3. 소수 카운트
     let nums = numbers.split('').map(el => Number(el))
-    let result = new Set()
+    let result = new Set(); // 중복제거
     // 순열 만들기
-    const getPermutation = (arr, fixed) => {
+    const getPermutation = (arr, fixed) => { // 011 -> 101 110
         for(let i=0; i<arr.length; i++){
             const newArr = [...arr]
             newArr.splice(i, 1)
-            if (isPrime(parseInt(fixed + arr[i]))) {
+            // '011', '11'
+            if(isPrime(parseInt(fixed + arr[i]))) {
             result.add(parseInt(fixed + arr[i]));
             }
             getPermutation(newArr, fixed + arr[i]);

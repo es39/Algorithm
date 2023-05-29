@@ -15,9 +15,12 @@ function solution(maps) {
     
     while(queue.length) {
         const [y, x, d] = queue.shift()
+        // 범위를 초과했을 경우
         if(y < 0 || y >= lengthY) continue;
         if(x < 0 || x >= lengthX) continue;
+        // 이미 지나온 길인 경우
         if(maps[y][x] === 0) continue;
+        // 타겟 위치와 일치하는 경우
         if(y === targetY && x === targetX) return d
         
         maps[y][x] = 0

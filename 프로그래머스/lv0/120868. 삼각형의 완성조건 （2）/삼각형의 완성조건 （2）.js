@@ -6,13 +6,5 @@ function solution(sides) {
     let min = Math.min(...sides)
     let dif = max - min
     let sum = max + min
-    // 1번 케이스
-    for(let i=dif+1; i<=max; i++){
-        result.push(i)
-    }
-    // 2번 케이스
-    for(let i=max+1; i<sum; i++){
-        result.push(i)
-    }
-    return result.length
+    return sum-dif-1
 }

@@ -7,12 +7,11 @@ function solution(food) {
     const evenFood = []
     let result = ''
     for(let i=0; i<food.length; i++){
-        if(food[i] % 2 !== 0) evenFood.push((food[i] - 1)/2)
-        else evenFood.push(food[i]/2)
+        if(food[i] % 2 !== 0) evenFood.push(String((food[i] - 1)/2))
+        else evenFood.push(String(food[i]/2))
     }
-    const evenFoodStr = evenFood.map(el => String(el))
     // 음식 정렬 (반만)
-    result += evenFoodStr.map((el, idx) => String(idx).repeat(el))
+    result += evenFood.map((el, idx) => String(idx).repeat(el))
     result = result.split(',').join('')
     let reversedResult = result.split('').reverse().join('')
     return result + '0' + reversedResult

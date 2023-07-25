@@ -10,7 +10,7 @@ function solution(food) {
         if(food[i] % 2 !== 0) evenFood.push(String((food[i] - 1)/2))
         else evenFood.push(String(food[i]/2))
     }
-    // 음식 정렬 (반만)
+    // 음식 정렬하기
     result += evenFood.map((el, idx) => String(idx).repeat(el))
     result = result.split(',').join('')
     let reversedResult = result.split('').reverse().join('')
